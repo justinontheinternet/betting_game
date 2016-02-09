@@ -2,9 +2,37 @@
 <html>
 <head>
   <title>Money Making Game</title>
-  <script src="script.js"></script>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css"></script>
+  <script src="jquery-2.2.0.js"></script>
+  <script src="application.js"></script>
 </head>
 <body>
+  <h1 class="info">Let's Play the Money-Making Game!</h1>
+  <div class="info" id="instructions">
+    <p>
+      <strong>Instructions:</strong>
+      <ul>
+        <li>Your bank starts at 100 points.</li>
+        <li>Wager between 5 and 10 points.</li>
+        <li>Enter a number between 1 and 10.</li>
+        <li>If your number matches the one chosen by the computer, the wager will be added to your bank.</li>
+        <li>If your guess is off by one, it's a draw and your bank stays the same.</li>
+        <li>If you're off by more than one number, the wager is deducted from your bank.</li>
+      </ul>
+    </p>
+  </div>
+  <div class="info">
+    <h3>Bank:<span>100</span></h3>
+  </div>
+  <div class="info">
+      Wager:<input type="number" id="wager">
+      Guess:<input type="number" id="guess">
+      <input type="submit" id="set-values">
+      <input type="submit" id="reset" value="Reset">
+  </div>
+  <h1 class="hide" id="win">You win!</h1>
+  <h1 class="hide" id="lose">You lose!</h1>
+
 
 </body>
 </html>
