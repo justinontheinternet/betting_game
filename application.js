@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
   var bank = 100;
-  var bet = 0;
-  var guess = 0;
-  var number = 0;
 
   $('#set-values').on('click', function(){
     getBet();
@@ -12,13 +9,17 @@ $(document).ready(function(){
     evaluateGuess();
     if (bank <= 0){
       youLose();
+      $("#set-values").hide();
     } else if (bank >= 150){
       youWin();
+      $("#set-values").hide();
     }
   });
 
   $('#reset').on('click', function(){
+    $(".hide").hide();
     resetBank();
+    $("#set-values").show();
   });
 
   function resetBank() {
